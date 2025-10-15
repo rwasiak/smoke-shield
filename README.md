@@ -1,94 +1,104 @@
-# 10x Astro Starter
+# SmokeShield
 
-A modern, opinionated starter template for building fast, accessible, and AI-friendly web applications.
+**Version:** 0.0.1
+
+SmokeShield is a mobile-first Progressive Web App designed to provide instant, empathetic, and personalized AI-driven interventions based on Cognitive Behavioral Therapy (CBT) techniques to help users quit smoking (traditional and e-cigarettes).
+
+## Table of Contents
+
+- [Project Description](#project-description)
+- [Tech Stack](#tech-stack)
+- [Getting Started Locally](#getting-started-locally)
+- [Available Scripts](#available-scripts)
+- [Project Scope](#project-scope)
+- [Project Status](#project-status)
+- [License](#license)
+
+## Project Description
+
+When users experience sudden cravings during their quit-smoking journey, they often lack immediate, personalized support. SmokeShield aims to interrupt the automatic reach for a cigarette by offering a one-click AI-powered chat intervention tailored to each user’s profile and triggers.
+
+Key features include:
+
+- Onboarding with user profile data (gender, age, type of smoking habit, main triggers, motivations).
+- Ultraminimalist main screen with a central intervention button.
+- AI conversation based on predefined CBT scenarios.
+- Feedback loop to record success (Yes/No) and add or select triggers.
 
 ## Tech Stack
 
-- [Astro](https://astro.build/) v5.5.5 - Modern web framework for building fast, content-focused websites
-- [React](https://react.dev/) v19.0.0 - UI library for building interactive components
-- [TypeScript](https://www.typescriptlang.org/) v5 - Type-safe JavaScript
-- [Tailwind CSS](https://tailwindcss.com/) v4.0.17 - Utility-first CSS framework
+- **Frontend:** Astro 5, React 19, TypeScript 5
+- **Styling:** Tailwind CSS 4, Shadcn/ui components
+- **Backend-as-a-Service:** Supabase (PostgreSQL, Authentication)
+- **AI integration:** Openrouter.ai (supporting various LLM providers)
+- **PWA:** Optimized as a Progressive Web App
+- **CI/CD:** GitHub Actions
+- **Hosting:** Docker image on DigitalOcean
 
-## Prerequisites
+## Getting Started Locally
 
-- Node.js v22.14.0 (as specified in `.nvmrc`)
-- npm (comes with Node.js)
+### Prerequisites
 
-## Getting Started
+- Node.js v22.14.0 (see `.nvmrc`)
+- pnpm or npm
 
-1. Clone the repository:
+### Installation
 
 ```bash
-git clone https://github.com/przeprogramowani/10x-astro-starter.git
-cd 10x-astro-starter
+# Clone the repository
+git clone git@github.com:rwasiak/smoke-shield.git
+cd smoke-shield
+
+# Install dependencies
+pnpm install    # or npm install
 ```
 
-2. Install dependencies:
+### Running in Development
 
 ```bash
-npm install
-```
-
-3. Run the development server:
-
-```bash
-npm run dev
-```
-
-4. Build for production:
-
-```bash
-npm run build
+pnpm dev         # or npm run dev
+# Open http://localhost:3000 in your browser
 ```
 
 ## Available Scripts
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
-- `npm run lint:fix` - Fix ESLint issues
+In the project directory, you can run:
 
-## Project Structure
+| Script          | Description                             |
+| --------------- | --------------------------------------- |
+| `pnpm dev`      | Starts Astro development server         |
+| `pnpm build`    | Builds the production-ready application |
+| `pnpm preview`  | Previews the production build locally   |
+| `pnpm astro`    | Runs the Astro CLI                      |
+| `pnpm lint`     | Runs ESLint across the project          |
+| `pnpm lint:fix` | Runs ESLint with `--fix`                |
+| `pnpm format`   | Formats code with Prettier              |
 
-```md
-.
-├── src/
-│   ├── layouts/    # Astro layouts
-│   ├── pages/      # Astro pages
-│   │   └── api/    # API endpoints
-│   ├── components/ # UI components (Astro & React)
-│   └── assets/     # Static assets
-├── public/         # Public assets
-```
+_Replace `pnpm` with `npm run` if using npm._
 
-## AI Development Support
+## Project Scope
 
-This project is configured with AI development tools to enhance the development experience, providing guidelines for:
+### Phase 1: Proof of Concept (POC)
 
-- Project structure
-- Coding practices
-- Frontend development
-- Styling with Tailwind
-- Accessibility best practices
-- Astro and React guidelines
+- Onboarding screen collecting user details
+- Ultraminimalist interface with a single intervention button
+- AI chat interaction based on 10–15 CBT scenarios
+- Feedback loop (success logging, trigger selection/creation)
+- User authentication & data protection (signup, login, secure data storage, account and history deletion)
 
-### Cursor IDE
+### Phase 2: Minimum Viable Product (MVP)
 
-The project includes AI rules in `.cursor/rules/` directory that help Cursor IDE understand the project structure and provide better code suggestions.
+- All POC features
+- Dynamic personalization using user history
+- Milestone tracking (24h, 3 days, 1 week, etc.)
+- Event-based notifications (milestone achievements, inactivity reminders)
+- Home screen widget for one-click intervention
+- Multilingual support (Polish, English, Spanish)
 
-### GitHub Copilot
+## Project Status
 
-AI instructions for GitHub Copilot are available in `.github/copilot-instructions.md`
-
-### Windsurf
-
-The `.windsurfrules` file contains AI configuration for Windsurf.
-
-## Contributing
-
-Please follow the AI guidelines and coding practices defined in the AI configuration files when contributing to this project.
+Currently in **Phase 1 (POC)** development aiming to validate immediate AI-driven intervention effectiveness.
 
 ## License
 
-MIT
+_No license specified. Please add a LICENSE file to choose an open-source license._
