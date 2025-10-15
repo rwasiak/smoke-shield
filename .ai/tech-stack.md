@@ -23,3 +23,7 @@ CI/CD i Hosting:
 
 - Github Actions do tworzenia pipeline’ów CI/CD
 - DigitalOcean do hostowania aplikacji za pośrednictwem obrazu docker
+
+Bramka płatności i zarządzanie subskrypcją (TODO):
+
+- Ten moduł będzie do opracowania po pomyślnym zwalidowaniu pomysłu przy pomocy POC
